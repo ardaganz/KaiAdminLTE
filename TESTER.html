@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Running Text</title>
+  <style>
+    
+
+    .marquee-container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .marquee {
+      position: absolute;
+      white-space: nowrap;
+      font-size: 5rem;
+      font-weight: bold;
+      color: #000;
+      animation: marqueeAnimation 10s ease-in-out infinite;
+    }
+
+    @keyframes marqueeAnimation {
+      0% {
+        opacity: 0;
+      }
+      10% {
+        opacity: 1; /* Tiba-tiba muncul */
+        transform: translateX(0);
+      }
+      40% {
+        transform: translateX(0); /* Diam selama 5 detik */
+      }
+      90% {
+        transform: translateX(-100%); /* Bergerak dari kanan ke kiri */
+        opacity: 1;
+      }
+      100% {
+        opacity: 0; /* Menghilang */
+      }
+    }
+  </style>
+
+  <div class="marquee-container">
+    <div class="marquee">WELCOME DASHBOARD ARDA</div>
+  </div>
